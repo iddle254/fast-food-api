@@ -1,4 +1,4 @@
-from flask import Flask,jsonify,json
+from flask import Flask,jsonify,json,request
 #imports pytest
 import pytest
 
@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 #mock_data
 order_items = [{'name':'pizza'},{'name':'steak'},{'name':'rice'},{'name':'Fries'}]
-item_to_be_added = [{'name':'ugali'}]
+item_to_be_added = {'name':'ugali'}
 
 #red test
 def test_orders():
@@ -35,7 +35,7 @@ def update(name):
 	ordered = [item for item in order_items if item['name']==name]
 	ordered[0]['name'] = request.json['name']
 	return jsonify({'item':ordered[0]})
-"""
+""".
 tests for the new order
 
 """
