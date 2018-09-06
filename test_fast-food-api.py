@@ -35,6 +35,27 @@ def update(name):
 	ordered = [item for item in order_items if item['name']==name]
 	ordered[0]['name'] = request.json['name']
 	return jsonify({'item':ordered[0]})
+"""
+tests for the new order
+
+"""
+#red test
+def test_new_order():
+	#test to see if a new order is created
+	result=app.test_client()
+	no_orders=len(order_items)
+	response= result.post('/api/v1/order', data=json.dumps(item_to_be_added) ,content_type='application/json')
+	data=json.loads(response.data)
+	no_new_orders = len (data)    
+	assert no_orders + 1 == no_new_orders
+	assert(response.status_code==201)
+#green test
+@app.route('/api/v1/order',methods=['POST'])
+def new_order():	     
+	item = {'name':request.json['name']}
+	order_items.append(item)
+	return jsonify({'order_items':order_items})
+
 
 
 if __name__ == '__main__':
