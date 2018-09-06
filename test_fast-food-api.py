@@ -20,6 +20,22 @@ def test_orders():
 def orders():	
 	return jsonify({'order_items':order_items})
 """
+tests a single order
+
+"""
+#red test
+#test to see if only one order is returned
+def test_order():		
+    result=app.test_client()
+    response= result.get('/api/v1/order',content_type='application/json')
+    assert(response.status_code==200)
+
+#green 
+@app.route('/api/v1/order/<string:name>',methods=['GET'])
+def order(name):
+	ordered = [item for item in order_items if item['name']==name]
+	return jsonify({'item':ordered[0]})
+"""
 tests the update order
 
 """
