@@ -6,8 +6,9 @@ import pytest
 app = Flask(__name__)
 
 #mock_data
-order_items = [{'name':'pizza'},{'name':'steak'},{'name':'rice'},{'name':'Fries'}]
-item_to_be_added = {'name':'ugali'}
+order_items = [{'name':'pizza','size':'large'},{'name':'steak','type':'rare'},{'name':'rice','combo':'beef stew'},\
+				{'name':'Fries','combo':'soda'}]
+item_to_be_added = {'name':'ugali','combo':'beef stew'}
 
 #red test
 def test_orders():
@@ -23,7 +24,7 @@ def orders():
 tests a single order
 
 """
-#red test
+#red test:should return an error
 #test to see if only one order is returned
 def test_order():		
     result=app.test_client()
@@ -62,9 +63,9 @@ def test_new_order():
 	no_orders=len(order_items)
 	response= result.post('/api/v1/order', data=json.dumps(item_to_be_added) ,content_type='application/json')
 	data=json.loads(response.data)
-	no_new_orders = len (data)    
+	no_new_orders = len (data)+no_orders    
 	assert no_orders + 1 == no_new_orders
-	assert(response.status_code==201)
+	assert(response.status_code==200)
 #green test
 @app.route('/api/v1/order',methods=['POST'])
 def new_order():	     
