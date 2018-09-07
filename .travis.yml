@@ -3,13 +3,7 @@ language: python
 install:
   - pip install -r requirements.txt
 
-matrix:
-  include:
-    - python: 3.7
-      dist: xenial
-      sudo: true
+before_install:
+  - sudo apt-get update && sudo apt-get --reinstall install -qq language-pack-en language-pack-de
 script:
   - pytest
-# command to run test coverage
-after_success:
-  - coveralls
