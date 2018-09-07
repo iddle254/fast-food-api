@@ -1,12 +1,12 @@
 language: python
 
 python:
-  -"3.5"
-
-cache: pip
+  -"3.5.2"
 
 install:
   - pip install -r requirements.txt
 
 script:
   - pytest
+after_success:
+  - coveralls
