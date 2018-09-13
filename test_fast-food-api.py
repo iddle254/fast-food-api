@@ -52,7 +52,7 @@ def update(name):
 	ordered = [item for item in order_items if item['name']==name]
 	ordered[0]['name'] = request.json['name']
 	return jsonify({'item':ordered[0]})
-""".
+"""
 tests for the new order
 
 """
@@ -68,7 +68,7 @@ def test_new_order():
 	assert(response.status_code==200)
 #green test
 @app.route('/api/v1/order',methods=['POST'])
-def new_order():	     
+def new_order(name):	     
 	item = {'name':request.json['name']}
 	order_items.append(item)
 	return jsonify({'order_items':order_items})
