@@ -68,7 +68,7 @@ def test_new_order():
 	assert(response.status_code==200)
 #green test
 @app.route('/api/v1/order',methods=['POST'])
-def new_order(name):	     
+def new_order():	     
 	item = {'name':request.json['name']}
 	order_items.append(item)
 	return jsonify({'order_items':order_items})
