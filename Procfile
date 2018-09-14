@@ -1,2 +1,2 @@
-web: gunicorn app:test_fast-food-api
+web: gunicorn test_fast-food-api:app
 
