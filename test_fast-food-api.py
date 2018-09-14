@@ -6,8 +6,8 @@ import pytest
 app = Flask(__name__)
 
 #mock_data
-order_items = [{'name':'pizza','size':'large'},{'name':'steak','type':'rare'},{'name':'rice','combo':'beef stew'},\
-				{'name':'Fries','combo':'soda'}]
+order_items = [{'name':'pizza'},{'name':'steak'},{'name':'rice'},{'name':'Fries'}]
+				
 item_to_be_added = {'name':'ugali','combo':'beef stew'}
 
 #red test
@@ -45,7 +45,7 @@ def test_update():
 	#test to see if the order updates
     result=app.test_client()
     response= result.put('/api/v1/order', data=json.dumps(item_to_be_added) ,content_type='application/json')
-    assert(response.status_code==405)
+    assert(response.status_code==404)
 #green
 @app.route('/api/v1/order/<string:name>',methods=['PUT'])
 def update(name):

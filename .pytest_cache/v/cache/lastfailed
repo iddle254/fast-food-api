@@ -1,3 +1,4 @@
 {
-  "test_fast-food-api.py::test_get_order_not_created": true
+  "test_fast-food-api.py::test_get_order_not_created": true,
+  "test_fast-food-api.py::test_update": true
 }
