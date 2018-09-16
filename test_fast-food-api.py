@@ -6,9 +6,9 @@ import pytest
 app = Flask(__name__)
 
 #mock_data
-order_items = [{'name':'pizza'},{'name':'steak'},{'name':'rice'},{'name':'Fries'}]
+order_items = []
 				
-item_to_be_added = {'name':'ugali','combo':'beef stew'}
+item_to_be_added = {'name':'ugali'}
 
 #red test
 def test_orders():
