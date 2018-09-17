@@ -1,4 +1,4 @@
-from flask import Flask,jsonify,json,request
+from flask import Flask,jsonify
 #imports pytest
 import pytest
 
