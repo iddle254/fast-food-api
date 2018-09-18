@@ -1,3 +1,4 @@
 [
-  "app/test_fast-food-api.py::test_orders"
+  "app/test_fast-food-api.py::test_orders",
+  "app/test_fast-food-api.py::test_order"
 ]
