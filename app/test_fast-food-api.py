@@ -28,5 +28,11 @@ def test_new_order():
 	no_new_orders = len (data)+no_orders    
 	assert no_orders + 1 == no_new_orders
 	assert(response.status_code==200)
+#red test
+def test_update():	
+	#test to see if the order updates
+    result=app.test_client()
+    response= result.put('/api/v1/order', data=json.dumps(item_to_be_added) ,content_type='application/json')
+    assert(response.status_code==404)
 
 
