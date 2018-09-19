@@ -1,5 +1,5 @@
 [
   "app/test_fast-food-api.py::test_orders",
   "app/test_fast-food-api.py::test_order",
-  "app/test_fast-food-api.py::test_update"
+  "app/test_fast-food-api.py::test_new_order"
 ]
