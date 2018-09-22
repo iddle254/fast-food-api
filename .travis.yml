@@ -16,6 +16,6 @@ install:
   - pip install pytest-cov
 
 script:
-  - pytest --cov=app/app
+  - pytest --cov=app/app.py
 after_success:
   - coveralls
