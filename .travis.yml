@@ -12,8 +12,6 @@ matrix:
 
 install:
   - pip install -r requirements.txt
-  - pip install coveralls
-  - pip install pytest-cov 
 
 script:
   - pytest 
