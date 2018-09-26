@@ -27,5 +27,3 @@ def update(name):
 	ordered[0]['name'] = request.json['name']
 	return jsonify({'item':ordered[0]})
 
-if __name__ == '__main__':
-	app.run(debug=True)
