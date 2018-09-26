@@ -1,1 +1,4 @@
-{}
+{
+  "tests/test_fast-food-api.py": true,
+  "tests/v1/test_fast-food-api.py": true
+}

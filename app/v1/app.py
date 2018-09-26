@@ -1,7 +1,4 @@
-from flask import Flask,jsonify,json,request
-
-#creates an instance of flask
-app = Flask(__name__)
+from flask import jsonify,json,request
 
 #mock_data
 order_items = []
