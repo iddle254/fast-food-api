@@ -11,6 +11,7 @@ def test_orders():
     result=app.test_client()
     response= result.get('/api/v1/orders',content_type='application/json')
     assert(response.status_code==200)
+    
 
 #test to see if only one order is returned
 def test_order():		
