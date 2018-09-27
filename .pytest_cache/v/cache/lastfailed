@@ -1,1 +1,6 @@
-{}
+{
+  "tests/test_fast-food-api.py::test_new_order": true,
+  "tests/test_fast-food-api.py::test_order": true,
+  "tests/test_fast-food-api.py::test_orders": true,
+  "tests/test_fast-food-api.py::test_update": true
+}

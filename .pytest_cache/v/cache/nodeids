@@ -1,6 +1,6 @@
 [
-  "app/test_fast-food-api.py::test_orders",
-  "app/test_fast-food-api.py::test_order",
-  "app/test_fast-food-api.py::test_new_order",
-  "app/test_fast-food-api.py::test_update"
+  "tests/test_fast-food-api.py::test_orders",
+  "tests/test_fast-food-api.py::test_order",
+  "tests/test_fast-food-api.py::test_new_order",
+  "tests/test_fast-food-api.py::test_update"
 ]

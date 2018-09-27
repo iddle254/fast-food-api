@@ -1,7 +1,6 @@
 from flask import Flask,jsonify,json,request
 #imports pytest
 import pytest
-from app import app
 
 order_items=[]
 item_to_be_added = {'name':'ugali'}
