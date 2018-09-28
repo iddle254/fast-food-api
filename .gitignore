@@ -1,0 +1,2 @@
+#excludes my venv from vcs
+venv/
