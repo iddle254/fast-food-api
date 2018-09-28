@@ -1,2 +1,8 @@
 #excludes my venv from vcs
 venv/
+
+#excludes .RC files
+*.RC
+
+*.pyc
+*.PYC
